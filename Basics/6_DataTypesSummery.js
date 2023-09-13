@@ -35,3 +35,24 @@ console.log(typeof userEmail)       //out-->undefined
 console.log(typeof heros)            //out-->object
 console.log(typeof obj)               //out-->object
 console.log(typeof myFunction)       //out-->function
+
+
+
+
+// Stack(Primitive),Heap(Non-Primitive)
+
+let myYoutubename="Premkumar"
+let anothername=myYoutubename
+anothername="KumarPrem"
+console.log(myYoutubename)    //out-->Premkumar
+console.log(anothername);     //out-->KumarPrem
+
+let userOne={
+      email:"google@gamil.com",
+      upi:"user@ybl"
+}
+
+let userTwo=userOne
+userTwo.email="prem@gmail.com"
+console.log(userOne.email)      //out-->prem@gmail.com
+console.log(userTwo.email)      //out-->prem@gmail.coom
