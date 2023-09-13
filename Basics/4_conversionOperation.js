@@ -111,6 +111,52 @@ let gamecounter=100;
 gamecounter++;
 console.log(gamecounter);   //out-->101
 */
- let gamecounter=100;
- gamecounter++;
+ /*let gamecounter=100;
+ ++gamecounter;
  console.log(gamecounter)  //out-->101
+*/
+
+/*
+ let gamecounter=100;
+ --gamecounter;
+ console.log(gamecounter)  //out-->99
+ */
+/*
+ let gamecounter=100
+ gamecounter--
+ console.log(gamecounter)  //out-->99
+ */
+
+ /*let x = 3;
+const y = x++;
+
+console.log(`x:${x}, y:${y}`);
+// Expected output: "x:4, y:3"
+
+let a = 3;
+const b = ++a;
+
+console.log(`a:${a}, b:${b}`);
+// Expected output: "a:4, b:4
+*/
+/*
+let x = 3;
+const y = x++;
+console.log(`x:${x},y:${y}`)
+// x is 4; y is 3
+
+let x2 = 3n;
+const y2 = x2++;
+console.log(`x2:${x2},y2:${y2}`)
+// x2 is 4; y2 is 3
+
+let x = 3;
+const y = ++x;
+// x is 4; y is 4
+//console.log(`x2:${x2},y2:${y2}`)
+
+let x2 = 3n;
+const y2 = ++x2;
+// // x2 is 4; y2 is 4
+console.log(`x2:${x2},y2:${y2}`)
+*/
