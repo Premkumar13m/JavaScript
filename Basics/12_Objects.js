@@ -12,21 +12,21 @@ const Juser={
     lastLoginDays:["monday","saturrday"]
 }
 
-// console.log(Juser.email)        //out-->pk@gmail.com
-//    //   or
-// console.log(Juser["email"])     //out-->pk@gmail.com
+console.log(Juser.email)        //out-->pk@gmail.com
+   //   or
+console.log(Juser["email"])     //out-->pk@gmail.com
 
 
-// console.log(Juser["full name"])  
+console.log(Juser["full name"])  
 //console.log(Juser."full name")  or console.log(Juser.full name)   //wrong therefore always use Juser[] method.
 
-// console.log(Juser[mySym])       //out-->mykey1    //note:--> we access symbol like this only its a rule.
-// console.log(typeof mySym)       //out-->Symbol
+console.log(Juser[mySym])       //out-->mykey1    //note:--> we access symbol like this only its a rule.
+console.log(typeof mySym)       //out-->Symbol
 
-// Juser["email"]="premkumar@gmail.com"      //note:- it will change the email value in the present Object.
-// Object.freeze(Juser)
-// Juser["email"]="premkumar2234@gmail.com"    //note:- it will not affect the email value because before this we have allready freeze the Juser.
-// console.log(Juser)         
+Juser["email"]="premkumar@gmail.com"      //note:- it will change the email value in the present Object.
+Object.freeze(Juser)
+Juser["email"]="premkumar2234@gmail.com"    //note:- it will not affect the email value because before this we have allready freeze the Juser.
+console.log(Juser)         
 
 //out-->{
 //     name: 'prem',
