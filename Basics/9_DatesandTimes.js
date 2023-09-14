@@ -31,3 +31,6 @@ console.log(newDate.getDay())         //out-->4    //it gives current day number
 newDate.toLocaleString('default',{
     weekday:"long",
 })
+console.log(newDate.toLocaleString('default',{
+    weekday:"long",                                //output-->thursday    //it gives full day name
+}))
