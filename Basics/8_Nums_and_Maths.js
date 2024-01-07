@@ -29,7 +29,8 @@ console.log(otherNumber3.toPrecision(3))   //out-->1.12e+3
  console.log(Math.max(4,3,6,8))   //8
 
  console.log(Math.random())                // random output from 0 to 1
- console.log((Math.random()*10)+1)           //  if we want our random greater than or equal to one than we simply multiply the random number by 10 and then add 1 in that particular number
+ console.log((Math.random()*10)+1)           //  if we want our random greater than or equal to one than we simply
+                                             //  multiply the random number by 10 and then add 1 in that particular number
    
 //note:-  if we wants our random vaiables to be between the given number then we simply use this technique 
 const min=10
