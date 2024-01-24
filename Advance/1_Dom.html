@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Learning</title>
+</head>
+<body style="background-color: black;color: aliceblue;">
+<div class="parent">
+<div class="day">Monday</div>
+<div class="day">Tuesday</div>
+<div class="day">Wednesday</div>
+<div class="day">Thursday</div>
+</div>
+</body>
+<script>
+ const parent=document.querySelector('.parent')
+ console.log(parent);   // it will print all div class element having parent class also.
+console.log(parent.children) // it will print the all the 4 div tag having class day.
+console.log(parent.children[1].innerHTML)  //Tuesday
+
+for (let i = 0; i<parent.children.length; i++) {
+   console.log(parent.children[i].innerHTML)   // it will print the monday to thursday line by line.
+}
+parent.children[1].style.color="orange"  // it will change the color of tuesday to orange
+console.log(parent.firstElementChild);    //<div class="day">Monday</div>
+console.log(parent.lastElementChild);    //<div class="day">Thursday</div>
+
+const dayOne=document.querySelector('.day')  
+console.log(dayOne)                       //<div class="day">Monday</div>
+console.log(dayOne.parentElement)         //it will all the 5 div tag.
+console.log(dayOne.nextElementSibling)   //<div class="day" style="color: orange;">Tuesday</div>
+
+console.log(parent.childNodes)    //NodeList(9) [text, div.day, text, div.day, text, div.day, text, div.day, text]
+                                //   0:text
+                                //   1:div.day
+                                //   2:text
+                                //   3:div.day
+                                //   4:text
+                                //   5:div.day
+                                //   6:text
+                                //   7:div.day
+                                //   8:text
+                                //   length:9
+</script>
+</html>
