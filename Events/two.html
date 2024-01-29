@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventListner methods</title>
+</head>
+<body>
+    <h1>hello from the EventListner</h1>
+    <button id="stop">stop</button>
+    
+</body>
+<script>
+ 
+   setTimeout(function(){        //the setTimeout function will print the the console after 2000seconds.
+            console.log("hi there")
+            console.log('hello')
+    },2000)
+
+                        //or
+
+/*
+   const output=function(){
+    console.log('hi from setTimeout')
+   }
+   setTimeout(output,2000)
+*/
+                     // if we want to change h1 tag content then afer 4000 seconds.
+const changeText=function(){
+    document.querySelector("h1").innerHTML="this is the best  js course"
+}
+const ChangeMe=setTimeout(changeText,4000)
+               // if we want to stop the change after clicking on the stop button then
+
+document.querySelector('#stop').addEventListener('click',function(){
+    clearTimeout(ChangeMe) // due to this line when we click on the button the content will  not change it will stop.
+})                         // clearTimeout method will take reference of the setTimeout method.
+</script>
+</html>
+
+
