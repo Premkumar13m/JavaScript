@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uses of the EventListner</title>
+</head>
+<body>
+    <h1>hello from the EventListner</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    const output=function(str){
+        console.log(str,Date.now());
+    }
+   const intervalId= setInterval(output,2000,"prem")   //due this setInterval this function gives output after 2000second one after another recursively.therefore we have to stop this.
+  document.querySelector('#stop').addEventListener('click',function(){
+    clearInterval(intervalId)
+  })
+  document.querySelector('#start').addEventListener('click',function(){
+    setInterval(output,2000,"prem") 
+  })
+
+</script>
+</html>
