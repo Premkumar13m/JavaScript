@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+// document.getElementById("owl").onclick=function(){
+//     alert('hi there you clicked on the owl image')
+// }             
+               //  better approach
+// document.getElementById('owl').addEventListener('click',function(){
+//     alert('hi this is owl')
+// },false)// here it is by the default false if we write then also it is right and if we dont write false then also it is correct.
+ 
+
+//     document.getElementById('owl').addEventListener('click',function(e){
+//     console.log(e);   // it will print all the methods that an addEventListener contains.
+// })
+// type,timestamp, dafaultPrevented,target,toElement,srcElement,currentTarget,clientX,clientY,screenX,screenY,altkey,ctrlkey,shiftkey,keycode
+
+
+// document.getElementById('images').addEventListener('click',function(e){
+//     console.log("you clicked on the images")   // if you click on any images then on console there will be an output message is displyed as you clicked on the images.
+// })
+
+                                    //  BUBBLING EVENTS
+
+/* document.getElementById('images').addEventListener('click',function(e){
+    console.log("you clicked on the images")   // if you click on any images then on console there will be an output message is displyed as you clicked on the images.
+})
+
+    document.getElementById('owl').addEventListener('click',function(e){
+    console.log(e);   // firstly it will print all the methods that an addEventListener contains.
+                      // and then it will print you clicked on the images
+})
+*/
+//this technique is called BUBBLING EVENTS.because fistly internal id owl element message then the parent id images message will be printed.
+// also it goes from the bottom to top.
+
+
+                                       //  CAPTURING EVENTS
+
+                            //  but when we change the default value from false to true then it will goes fron top to bottom.i.e,firstly parent id message will be printed then the childern id message will be printed.
+                            // this technique is called CAPTURING EVENTS
+
+/* document.getElementById('images').addEventListener('click',function(e){
+console.log("you clicked on the images")   // if you click on any images then on console there will be an output message is displyed as you clicked on the images.
+},true)
+
+document.getElementById('owl').addEventListener('click',function(e){
+console.log("you clicked on the owl id ");   // firstly it will print parent id message i.e.,you clicked on the images
+                      // and then it will print the children id message i.e.,you clicked on the owl id 
+},true)
+*/
+
+                                  //METHODS OF EVENTLISTENERS
+        
+        //stopPropagation():- this method will stop the bubbling of the next.it means that only current id element message will be displayed and the next parent id message will not be displayed.
+
+ /* document.getElementById('images').addEventListener('click',function(e){
+console.log("you clicked on the images")
+})
+
+document.getElementById('owl').addEventListener('click',function(e){
+console.log("you clicked on the owl id ");  // it will only print you clicked on the owl id
+e.stopPropagation()  // this line will stop the propagation of the images id .
+})
+
+document.getElementById('google').addEventListener('click',function(e){
+    e.preventDefault()  // this line will stop to open the google browser.
+    console.log('google clicked')  // it will print google clicked on the console.
+                                   // and then it will print the you clicked on the owl id.
+
+},false)
+*/
+
+  //questions> when we click on the any images then that particulat  images should be removed.
+  
+/* document.querySelector('#images').addEventListener('click',function(e){
+      if (e.target.tagName==='IMG') {
+        let removeIt=e.target.parentNode
+        removeIt.remove()    //   or   //removeIt.parentNode.removeChild(removeIt)
+      }
+  },false)
+
+*/
+document.querySelector('#images').addEventListener('click',function(e){
+    console.log(e.target.tagName);   // out:- img  , when we click on any image then it will print that image tag name
+    console.log(e.target.parentNode); //<li>...</li>  , when we click on any image then it will print that images parent tag name with their inner content also.
+})
+
+</script>
+</html>
