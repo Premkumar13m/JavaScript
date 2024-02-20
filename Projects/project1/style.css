@@ -1,0 +1,52 @@
+html {
+    margin: 0;
+    padding:0;
+  }
+  
+  span {
+    display: block;
+  }
+  .canvas {
+    margin: 100px auto 100px;
+    width: 80%;
+    text-align: center;
+    background-color: darkgrey;
+  }
+  
+  .button {
+    width: 100px;
+    height: 100px;
+    border: solid black 2px;
+    display: inline-block;
+    margin-top: 50px;
+  }
+  
+  #grey {
+    background: grey;
+  }
+  
+  #white {
+    background: white;
+  }
+  #blue {
+    background: blue;
+  }
+  #yellow {
+    background: yellow;
+  }
+  a{
+    height: 90px;
+    width: auto;
+    border-radius: 10px;
+    background-color: rgb(2, 13, 31);
+    padding: 20px;
+    font-size:larger;
+    margin: 60px;
+    text-decoration:none;
+    color: white;
+  }
+  a:hover{
+  background-color: rgb(102, 13, 102);
+  border: solid black 2px;
+  color: black;
+  }
